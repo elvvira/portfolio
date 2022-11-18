@@ -452,6 +452,7 @@ body {
   .article__description {
     padding-top: 100px;
     padding-left: 120px;
+    font-size: 1.8rem;
   }
 }
 .article__title {
@@ -465,6 +466,7 @@ body {
   .article__text {
     top: 150px;
     left: 850px;
+    width: 400px;
   }
 }
 .article__image {
@@ -495,6 +497,10 @@ body {
   left: 40px;
   top: 550px;
   rotate: 30deg;
+}
+
+.article-about {
+  background-color: var(--gray-dark);
 }
 
 .title-spray {
