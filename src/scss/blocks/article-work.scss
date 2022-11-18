@@ -1,0 +1,27 @@
+
+
+.works{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    &__section-1{
+        background-color: var(--primary-color);
+    }
+    &__section-2{
+        background-color: var(--secondary-color);
+    }
+    &__section-3{
+        background-color: var(--gray-light);
+    }
+    &__section-4{
+        background-color: var(--gray-dark);
+    }
+    &__section-5{
+        background-color: var(--black);
+    }
+    &__section-6{
+        background-color: var(--title-color);
+    }
+   
+}
