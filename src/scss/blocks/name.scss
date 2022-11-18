@@ -1,0 +1,16 @@
+@use '../mixins/responsive.scss' as *;
+
+.name{
+    font-family: 'spray';
+    text-align: right;
+    position: absolute;
+    top: 520px;
+    right: 30px;
+    width: 70%;
+    @include responsive (desktop){
+        top: 480px;
+        width: 30%;
+        font-size: 5rem;
+        margin-right: 40px;
+    }
+}

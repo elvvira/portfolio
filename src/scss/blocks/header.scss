@@ -1,0 +1,38 @@
+@use '../mixins/responsive.scss' as *;
+@use '../mixins/pseudo.scss' as *;
+
+.header{
+    height: 100vh;
+    padding: 30px;
+    top: 0;
+    left: 0;
+    background-image: url(../assets/images/bg-header-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+            
+    &__top{
+        position: relative;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        margin-bottom: 260px;
+        z-index: 100;
+        @include responsive (desktop){
+            padding: 1.5rem;
+        }
+    }
+    &__section{
+        color: white;
+        font-size: 2rem;
+        width: 20%;
+        @include responsive (desktop){
+            margin-top: -90px;
+            font-size: 3.5rem;
+            padding-left: 70px;
+            padding-right: 70px;
+        
+        }
+    }
+}

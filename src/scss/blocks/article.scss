@@ -1,0 +1,57 @@
+@use '../mixins/responsive.scss' as *;
+
+.article{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black);
+    position: relative;
+    @include responsive (desktop){
+
+    }
+
+    &__description{
+        color: var(--gray-light);
+        padding-top: 60px;
+        padding-left: 35px;
+        @include responsive (desktop){
+            padding-top: 100px;
+            padding-left: 120px;
+        }
+    }
+    &__title{
+        font-size: 1.8rem;
+        margin-top: 10px;
+    }
+    &__text{
+        width: 280px;
+        @include responsive (desktop){
+            top: 150px;
+            left: 850px; 
+         }
+    }
+    &__image{
+        position: absolute;
+        top: 340px;
+        left: 80px;
+        width: 70%;
+        @include responsive (desktop){
+           top: 150px;
+           left: 850px; 
+        }
+    }
+    &__star-1{
+        position: absolute;
+        left: 30px;
+        @include responsive (desktop){
+            width: 8%;
+            top: 120px;
+            left: 850px; 
+         }
+    }
+    &__star-2{
+        position: absolute;
+        left: 40px;
+        top: 550px;
+        rotate: 30deg;
+    }
+}
