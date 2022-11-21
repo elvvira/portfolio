@@ -385,17 +385,18 @@ body {
 .name {
   font-family: "spray";
   text-align: right;
-  position: absolute;
-  top: 520px;
-  right: 30px;
-  width: 70%;
+  position: relative;
+  font-size: 2.2rem;
+  margin-top: 0;
+  z-index: 10;
+}
+.name__span {
+  display: block;
+  margin-bottom: 10px;
 }
 @media screen and (min-width: 1440px) {
   .name {
-    top: 480px;
-    width: 30%;
     font-size: 5rem;
-    margin-right: 40px;
   }
 }
 
@@ -410,30 +411,50 @@ body {
   position: relative;
   overflow: hidden;
 }
+.header--bg {
+  background-color: rgba(0, 0, 0, 0.443);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .header__top {
   position: relative;
   display: flex;
   text-align: center;
   justify-content: space-between;
-  margin-bottom: 260px;
   z-index: 100;
+  margin-bottom: 30%;
 }
 @media screen and (min-width: 1440px) {
   .header__top {
+    margin-bottom: 4%;
     padding: 1.5rem;
   }
 }
 .header__section {
   color: white;
-  font-size: 2rem;
-  width: 20%;
+  font-size: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 100;
 }
 @media screen and (min-width: 1440px) {
   .header__section {
-    margin-top: -90px;
-    font-size: 3.5rem;
-    padding-left: 70px;
-    padding-right: 70px;
+    font-size: 2.5rem;
+  }
+}
+
+.title {
+  width: 200px;
+  z-index: 10;
+}
+@media screen and (min-width: 1440px) {
+  .title {
+    margin-bottom: 0;
   }
 }
 
@@ -441,7 +462,6 @@ body {
   background-color: var(--black);
   color: var(--gray-light);
   padding-top: 10%;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -449,6 +469,7 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .article-me {
+    padding-top: 0;
     flex-direction: row;
     justify-content: center;
     gap: 10%;
@@ -457,6 +478,7 @@ body {
 
 .article {
   height: 100vh;
+  position: relative;
 }
 .article__description {
   width: 80%;
@@ -492,23 +514,22 @@ body {
   background-image: url(../assets/images/rosa.png);
   background-repeat: no-repeat;
   background-position: 140% 170%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  padding-top: 10%;
 }
 @media screen and (min-width: 1440px) {
   .article-about {
-    flex-direction: row;
-    justify-content: center;
-    gap: 10%;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .article-about {
+    padding-top: 7%;
+    padding-left: 10%;
     background-size: 50%;
     background-position: 130% -220%;
   }
+}
+.article-about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
 }
 
 .article__design {
@@ -518,7 +539,7 @@ body {
   .article__design {
     text-align: left;
     position: relative;
-    top: 30%;
+    left: 45%;
   }
 }
 
@@ -527,25 +548,26 @@ body {
   flex-direction: column;
   align-items: center;
   position: relative;
+  top: -7%;
 }
 @media screen and (min-width: 1440px) {
   .read-more {
-    top: 71%;
-    right: 60%;
+    top: -28%;
+    right: 30%;
   }
 }
 .read-more-image {
-  width: 50%;
+  width: 30%;
   background-color: transparent;
 }
 @media screen and (min-width: 1440px) {
   .read-more-image {
-    width: 70%;
+    width: 13%;
   }
 }
 @media (hover: hover) {
   .read-more-image:hover {
-    width: 100%;
+    width: 16%;
   }
 }
 .read-more-text {
@@ -607,6 +629,14 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
+  width: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 1440px) {
+  .article-contact__icons {
+    width: 40px;
+  }
 }
 
 .title-spray {

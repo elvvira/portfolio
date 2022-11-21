@@ -20,6 +20,12 @@
         display: flex;
         justify-content: center;
         gap: 20px;
+        width: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        @include responsive (desktop){
+           width: 40px;
+        }
 
     }
 }

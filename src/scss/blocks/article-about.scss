@@ -6,32 +6,30 @@
     background-image: url(../assets/images/rosa.png);
     background-repeat: no-repeat;
     background-position: 140% 170%;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    @include responsive (desktop){
-        flex-direction: row;
-        justify-content: center;
-        gap: 10%;
-        
-    }
+    padding-top: 10%;
    
     @include responsive (desktop){
+        padding-top: 7%;
+        padding-left: 10%;
         background-size: 50%;
         background-position: 130% -220%;
     }
+    &-container{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        justify-content:center;
+        gap: 20px;
+
+    }
 }
-.article{
-    
-    &__design{
-        text-align: right;
-        @include responsive (desktop){
-            text-align: left;
-            position: relative;
-            top: 30%;
-        }
+
+.article__design{
+    text-align: right;
+    @include responsive (desktop){
+       text-align: left;
+        position: relative;
+        left: 45%;
     }
 }
 
@@ -40,27 +38,28 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    top: -7%;
+
 
     @include responsive (desktop){
-        top: 71%;
-        right: 60%;
+        top: -28%;
+        right: 30%;
     }
 
     &-image{
-        width: 50%;
+        width: 30%;
         background-color: transparent;
         @include responsive (desktop){
-            width: 70%;
+            width: 13%;
         }
     }
     &-image:hover{
         @include hover{
-            width: 100%;
+            width: 16%;
         }
     }
     &-text{
         margin-bottom: -50px;
-
     }
 }
 
