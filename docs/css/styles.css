@@ -368,7 +368,7 @@ a {
 }
 :root {
   /* Variables CSS */
-  --primary-color: #A3C362;
+  --primary-color: #74c362;
   --secondary-color: #DB689C;
   --gray-light: #ECE6E3;
   --gray-dark: #74788B;
@@ -440,8 +440,14 @@ body {
 .article {
   width: 100%;
   height: 100vh;
-  background-color: var(--black);
+  background-color: var(--gray-dark);
   position: relative;
+}
+@media screen and (min-width: 1440px) {
+  .article {
+    padding-top: 3.9rem;
+    background-color: var(--black);
+  }
 }
 .article__description {
   color: var(--gray-light);
@@ -459,6 +465,11 @@ body {
   font-size: 1.5rem;
   margin-top: 10px;
 }
+@media screen and (min-width: 1440px) {
+  .article__title {
+    font-size: 3rem;
+  }
+}
 .article__text {
   width: 280px;
   font-size: 0.9rem;
@@ -467,7 +478,8 @@ body {
   .article__text {
     top: 150px;
     left: 850px;
-    width: 400px;
+    width: 500px;
+    font-size: 1.7rem;
   }
 }
 .article__image {
@@ -478,7 +490,7 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .article__image {
-    top: 150px;
+    top: 110px;
     left: 850px;
   }
 }
@@ -504,15 +516,36 @@ body {
   background-color: var(--gray-dark);
   background-image: url(../assets/images/rosa.png);
   background-repeat: no-repeat;
-  background-position: 140% 180%;
+  background-position: 140% 170%;
+}
+@media screen and (min-width: 1440px) {
+  .article-about {
+    background-size: 50%;
+    background-position: 130% -260%;
+  }
 }
 
 .article {
   position: relative;
 }
+@media screen and (min-width: 1440px) {
+  .article {
+    display: flex;
+    align-items: start;
+    gap: 80px;
+    padding-left: 3%;
+    padding-top: 10%;
+  }
+}
 .article__front {
   margin-bottom: -30px;
   padding-top: 8%;
+}
+@media screen and (min-width: 1440px) {
+  .article__front {
+    padding-top: 0;
+    padding-left: 100px;
+  }
 }
 .article__front::after, .article__design::after {
   content: "";
@@ -521,6 +554,11 @@ body {
   height: 2px;
   background-color: var(--title-color);
 }
+@media screen and (min-width: 1440px) {
+  .article__front::after {
+    width: 30%;
+  }
+}
 .article__design {
   text-align: right;
   display: flex;
@@ -528,8 +566,22 @@ body {
   align-items: flex-end;
   margin-right: 10%;
 }
+@media screen and (min-width: 1440px) {
+  .article__design {
+    align-items: flex-start;
+    text-align: left;
+    position: absolute;
+    top: 250px;
+    right: 0;
+  }
+}
 .article__design::after {
   top: 70%;
+}
+@media screen and (min-width: 1440px) {
+  .article__design::after {
+    top: 100%;
+  }
 }
 
 .read-more {
@@ -540,8 +592,19 @@ body {
   right: 5%;
   top: 73%;
 }
+@media screen and (min-width: 1440px) {
+  .read-more {
+    top: 71%;
+    right: 60%;
+  }
+}
 .read-more-image {
   width: 50%;
+}
+@media screen and (min-width: 1440px) {
+  .read-more-image {
+    width: 70%;
+  }
 }
 .read-more-text {
   margin-bottom: -50px;
@@ -551,6 +614,14 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+}
+@media screen and (min-width: 1440px) {
+  .works {
+    grid-template-columns: none;
+    grid-template-rows: repeat(6, 1fr);
+    width: 100%;
+    background-color: red;
+  }
 }
 .works__section-1 {
   background-color: var(--primary-color);
@@ -571,6 +642,31 @@ body {
   background-color: var(--title-color);
 }
 
+.article-contact {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/images/bg-footer-mobile.png);
+  background-repeat: no-repeat;
+  padding-top: 60%;
+}
+@media screen and (min-width: 1440px) {
+  .article-contact {
+    background-image: url(../assets/images/bg-footer-desktop.png);
+    background-size: cover;
+    padding-top: 20%;
+  }
+}
+.article-contact__logo {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10%;
+}
+.article-contact__icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
 .title-spray {
   color: var(--title-color);
   font-family: "spray";
@@ -578,6 +674,12 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   width: 200px;
+}
+@media screen and (min-width: 1440px) {
+  .title-spray {
+    font-size: 3rem;
+    width: 300px;
+  }
 }
 
 /* ESTILOS DEL FOOTER */
