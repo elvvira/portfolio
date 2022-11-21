@@ -13,19 +13,21 @@
     background-image: url(../assets/images/bg-menu-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 375px;
+    width: 100vw;
     height: 100vh;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 10;
     padding-top: 200px;
     padding-left: 30px;
     z-index: 100;
-    transform:  translateX(100%);
+   transform: translate(100%);
     transition: transform  1s cubic-bezier(.59,-1.07,.69,2.24);
     @include responsive (desktop){
-        width: 440px;
-        transform:  translateX(340%);
+        width: 30%;
+        background-image: none;
+        background-color: var(--gray-light);
+        
     }
 
     &__close{
@@ -47,7 +49,7 @@
     }
 }
 .menu--show{
-    transform: translateX(1000px);
+    transform: translateX(0);
 }
 .icon-arrow{
     width: 120px;
@@ -75,10 +77,15 @@
     text-align: right;
     transform:  translateX(100%);
     transition: transform  1s cubic-bezier(.59,-1.07,.69,2.24);
+    @include responsive (desktop){
+        background-image: none;
+        background-color: var(--black);
+        
+    }
 
     &__item{
         font-size: 2.2rem;
-        color: white;
+        color: var(--gray-light);
     }
 }
 .submenu--show{

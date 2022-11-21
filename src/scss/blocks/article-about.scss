@@ -1,73 +1,46 @@
 @use '../mixins/responsive.scss' as *;
+@use '../mixins/hover.scss' as *;
 
 .article-about{
     background-color: var(--gray-dark);
     background-image: url(../assets/images/rosa.png);
     background-repeat: no-repeat;
     background-position: 140% 170%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    @include responsive (desktop){
+        flex-direction: row;
+        justify-content: center;
+        gap: 10%;
+        
+    }
+   
     @include responsive (desktop){
         background-size: 50%;
-        background-position: 130% -260%;
+        background-position: 130% -220%;
     }
 }
 .article{
-    position: relative;
-    @include responsive (desktop){
-        display: flex;
-        align-items: start;
-        gap: 80px;
-        padding-left: 3%;
-        padding-top: 10%;
-    }
-    &__front{
-        margin-bottom: -30px;
-        padding-top:8%;
-        @include responsive (desktop){
-            padding-top: 0;
-            padding-left: 100px;
-        }
-    }
-    &__front::after,
-    &__design::after{
-        content: '';
-        position: absolute;
-        width:70%;
-        height: 2px;
-        background-color: var(--title-color);
-    }
-    &__front::after{
-        @include responsive (desktop){
-            width: 30%;
-        }
-    }
+    
     &__design{
-     text-align: right;
-     display: flex;
-     flex-direction: column;
-     align-items:flex-end;
-     margin-right: 10%;
-     @include responsive (desktop){
-            align-items: flex-start;
-            text-align: left;
-            position: absolute;
-            top:250px;
-            right: 0;
-        }
-    }
-    &__design::after{
-        top: 70%;
+        text-align: right;
         @include responsive (desktop){
-            top: 100%;
+            text-align: left;
+            position: relative;
+            top: 30%;
         }
     }
 }
+
 .read-more{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    right: 5%;
-    top: 73%;
+    position: relative;
+
     @include responsive (desktop){
         top: 71%;
         right: 60%;
@@ -75,8 +48,14 @@
 
     &-image{
         width: 50%;
+        background-color: transparent;
         @include responsive (desktop){
             width: 70%;
+        }
+    }
+    &-image:hover{
+        @include hover{
+            width: 100%;
         }
     }
     &-text{
@@ -84,3 +63,85 @@
 
     }
 }
+
+// .article{
+//     position: relative;
+//     @include responsive (desktop){
+//         display: flex;
+//         align-items: start;
+//         gap: 80px;
+//         padding-left: 3%;
+//         padding-top: 10%;
+//     }
+//     &__front{
+//         margin-bottom: -30px;
+//         padding-top:8%;
+//         @include responsive (desktop){
+//             padding-top: 0;
+//             padding-left: 100px;
+//         }
+//     }
+//     &__front::after,
+//     &__design::after{
+//         content: '';
+//         position: absolute;
+//         width:70%;
+//         height: 2px;
+//         background-color: var(--title-color);
+//     }
+//     &__front::after{
+//         @include responsive (desktop){
+//             width: 30%;
+//         }
+//     }
+//     &__design{
+//      text-align: right;
+//      display: flex;
+//      flex-direction: column;
+//      align-items:flex-end;
+//      margin-right: 10%;
+//      @include responsive (desktop){
+//             align-items: flex-start;
+//             text-align: left;
+//             position: absolute;
+//             top:250px;
+//             right: 0;
+//         }
+//     }
+//     &__design::after{
+//         bottom: 45%;
+//         @include responsive (desktop){
+//             top: 100%;
+//         }
+//     }
+// }
+// .read-more{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     position: absolute;
+//     right: 5%;
+//     top: 73%;
+//     @include responsive (desktop){
+//         top: 71%;
+//         right: 60%;
+//     }
+
+//     &-image{
+//         width: 50%;
+//         background-color: transparent;
+//         @include responsive (desktop){
+//             width: 70%;
+//         }
+//     }
+//     &-image:hover{
+//         @include hover{
+
+//             width: 100%;
+//         }
+//     }
+//     &-text{
+//         margin-bottom: -50px;
+
+//     }
+// }

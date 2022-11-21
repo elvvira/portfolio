@@ -6,7 +6,12 @@
     font-size: 2rem;
     margin-top: 0;
     margin-bottom: 0;
-    width: 200px;
+
+    &__span{
+        display: block;
+        margin-bottom: 7px;
+    }
+
     @include responsive (desktop){
         font-size: 3rem;
         width: 300px;
