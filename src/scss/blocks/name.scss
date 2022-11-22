@@ -11,7 +11,9 @@
         display: block;
         margin-bottom: 10px;
     }
-    
+    @include responsive (tablet){
+       font-size: 4rem;
+    }
     @include responsive (desktop){
         font-size: 5rem;
     }

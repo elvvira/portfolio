@@ -7,12 +7,15 @@
     background-repeat: no-repeat;
     background-position: 140% 170%;
     padding-top: 10%;
-   
+    @include responsive (tablet){
+        background-size: 90%;
+        background-position: -300% 110%;
+    }
     @include responsive (desktop){
         padding-top: 7%;
         padding-left: 10%;
-        background-size: 50%;
-        background-position: 130% -220%;
+        background-size: 60%;
+        background-position: -30% 180%;
     }
     &-container{
         display: flex;
@@ -26,8 +29,15 @@
 
 .article__design{
     text-align: right;
+    @include responsive (tablet){
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+       
+     }
     @include responsive (desktop){
-       text-align: left;
+       text-align: right;
         position: relative;
         left: 45%;
     }
@@ -41,27 +51,35 @@
     top: -7%;
 
 
+    @include responsive (tablet){
+        top: -5%;
+        right: 0%;
+    }
+
     @include responsive (desktop){
-        top: -28%;
-        right: 30%;
+        top: 8%;
+        right: 0%;
     }
 
     &-image{
         width: 30%;
-        background-color: transparent;
+        @include responsive (tablet){
+            width: 20%;
+        }
         @include responsive (desktop){
-            width: 13%;
+            width: 15%;
         }
     }
     &-image:hover{
         @include hover{
-            width: 16%;
+            width: 20%;
         }
     }
     &-text{
         margin-bottom: -50px;
     }
 }
+
 
 // .article{
 //     position: relative;

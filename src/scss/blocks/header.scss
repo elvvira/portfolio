@@ -11,15 +11,15 @@
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
+    scroll-snap-align: center; 
+    
     &--bg{
         background-color: rgba(0, 0, 0, 0.443);
         width: 100vw;
         height: 100vh;
         position: absolute;
         top: 0;
-        left: 0;
-
-        
+        left: 0;        
     }
             
     &__top{
@@ -29,8 +29,12 @@
         justify-content: space-between;
         z-index: 100;
         margin-bottom: 30%;
+        @include responsive (tablet){
+            margin-bottom: 40%;
+            padding: 1.5rem;
+        }
         @include responsive (desktop){
-            margin-bottom: 4%;
+            margin-bottom: 20%;
             padding: 1.5rem;
         }
     }
@@ -42,7 +46,9 @@
         flex-direction: column;
         justify-content: center;
         z-index: 100;
-        
+        @include responsive (tablet){
+           font-size: 2.8rem;
+        }
         @include responsive (desktop){
             font-size: 2.5rem;
         }
@@ -51,6 +57,9 @@
 .title{
     width: 200px;
     z-index: 10;
+    @include responsive (tablet){
+        margin-bottom: 0;
+    }
     @include responsive (desktop){
         margin-bottom: 0;
     }
