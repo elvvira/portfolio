@@ -380,8 +380,6 @@ a {
 body {
   font-family: "spray";
   font-family: "impact", sans-serif;
-  height: 100vh;
-  overflow-y: scroll;
 }
 
 .name {
@@ -501,10 +499,8 @@ body {
 }
 
 .article {
-  scroll-snap-align: center;
   height: 100vh;
   position: relative;
-  scroll-margin: 0;
 }
 .article__description {
   width: 80%;
@@ -650,10 +646,6 @@ body {
 }
 .read-more-text {
   margin-bottom: -50px;
-}
-
-.article-work {
-  scroll-snap-align: center;
 }
 
 .works {

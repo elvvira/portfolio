@@ -1,6 +1,14 @@
 /* ESTILOS DEL MAIN */
 @use '../mixins/responsive.scss' as *;
 
+.main-container{
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
 .main{
-    
+    scroll-snap-align: center; 
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
