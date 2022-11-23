@@ -482,6 +482,16 @@ body {
   }
 }
 
+/* ESTILOS DEL MAIN */
+.main-container {
+  height: 100%;
+}
+
+.main {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
 .article-me {
   background-color: var(--black);
   color: var(--gray-light);

@@ -1,12 +1,2 @@
 /* ESTILOS DEL MAIN */
 @use '../mixins/responsive.scss' as *;
-
-.main-container{
-    height: 100vh;
-    overflow-y: hidden;
-    scroll-snap-type: y mandatory;
-
-.main{
-   display: flex;
-    padding: 5px 10px;
-}

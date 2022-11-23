@@ -1,22 +1,2 @@
 @use '../mixins/responsive.scss' as *;
 
-.title-spray{
-    color: var(--title-color);
-    font-family: 'spray';
-    font-size: 2rem;
-    margin-top: 0;
-    margin-bottom: 0;
-
-    &__span{
-        display: block;
-        margin-bottom: 7px;
-    }
-    @include responsive (tablet){
-        font-size: 3rem;
-        width: 300px;
-    }
-    @include responsive (desktop){
-        font-size: 3rem;
-        width: 300px;
-    }
-}
