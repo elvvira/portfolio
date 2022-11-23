@@ -384,6 +384,7 @@ body {
 
 .name {
   font-family: "spray";
+  font-weight: 100;
   text-align: right;
   position: relative;
   font-size: 2.2rem;
@@ -411,6 +412,7 @@ body {
   top: 0;
   left: 0;
   background-image: url(../assets/images/bg-header-mobile.jpg);
+  background-position: -40%;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -441,7 +443,7 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .header__top {
-    margin-bottom: 20%;
+    margin-bottom: 5%;
     padding: 1.5rem;
   }
 }
@@ -476,7 +478,7 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .title {
-    margin-bottom: 0;
+    margin-bottom: -10px;
   }
 }
 
@@ -501,6 +503,7 @@ body {
 .article {
   height: 100vh;
   position: relative;
+  scroll-snap-align: center;
 }
 .article__description {
   width: 80%;
@@ -577,7 +580,7 @@ body {
     padding-top: 7%;
     padding-left: 10%;
     background-size: 60%;
-    background-position: -30% 180%;
+    background-position: -30% -60%;
   }
 }
 .article-about-container {
@@ -622,8 +625,8 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .read-more {
-    top: 8%;
-    right: 0%;
+    top: -28%;
+    right: 20%;
   }
 }
 .read-more-image {
@@ -646,6 +649,10 @@ body {
 }
 .read-more-text {
   margin-bottom: -50px;
+}
+
+.article-work {
+  scroll-snap-align: center;
 }
 
 .works {
@@ -824,7 +831,7 @@ body {
   .menu {
     width: 30%;
     background-image: none;
-    background-color: var(--gray-light);
+    background-color: var(--primary-color);
   }
 }
 .menu__close {

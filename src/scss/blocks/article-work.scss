@@ -1,6 +1,6 @@
 @use '../mixins/responsive.scss' as *;
 .article-work{
-   
+    scroll-snap-align: center;
 }
 .works{
     height: 100vh;

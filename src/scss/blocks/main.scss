@@ -3,12 +3,10 @@
 
 .main-container{
     height: 100vh;
-    overflow-y: scroll;
+    overflow-y: hidden;
     scroll-snap-type: y mandatory;
-}
+
 .main{
-    scroll-snap-align: center; 
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+   display: flex;
+    padding: 5px 10px;
 }

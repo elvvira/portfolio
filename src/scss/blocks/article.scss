@@ -20,6 +20,7 @@
 .article{
     height: 100vh;
     position: relative;
+    scroll-snap-align: center;
 
     &__description{
         width: 80%;

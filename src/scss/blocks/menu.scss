@@ -6,8 +6,6 @@
     z-index: -100;
 }
 
-
-
 .menu{
     position: absolute;
     background-image: url(../assets/images/bg-menu-mobile.jpg);
@@ -29,7 +27,7 @@
     @include responsive (desktop){
         width: 30%;
         background-image: none;
-        background-color: var(--gray-light);
+        background-color: var(--primary-color);
         
     }
 
